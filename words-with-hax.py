@@ -9,7 +9,6 @@ def create_pickle_file(src, dst):
 
     for word in open(src):
         word = word.strip()
-        print "Looking at %s, have %s" % (word, word_struct)
         current = word_struct
 
         for letter in word:
@@ -31,9 +30,7 @@ def main():
 
     (opts, args) = parser.parse_args()
 
-    word_struct = load_words(opts.dictionary)
-    import pprint
-    pprint.pprint(word_struct)
+    load_words(opts.dictionary)
 
 if __name__ == "__main__":
     main()
